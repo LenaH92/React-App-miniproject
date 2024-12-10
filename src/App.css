@@ -40,3 +40,36 @@
 .read-the-docs {
   color: #888;
 }
+
+/* NEW STYLING FROMHERE ON */
+.colorPalette {
+  color: #BA8F58;
+  color: #CC9901;
+  color: #DAA520;
+  color: #FAE59B;
+  color: #c39491;
+  color: #7C0B12;
+  color: #52090E;
+  color: #1B1811;
+  
+}
+
+#navbar {
+  padding: 1rem;
+  background-color: #282c34;
+  color: white;
+}
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+}
+
+#footer{
+  padding: 1rem;
+  text-align: center;
+  background-color: #f1f1f1;
+}

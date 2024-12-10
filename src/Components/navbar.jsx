@@ -1,9 +1,12 @@
-import React from 'react';
+//import React from 'react';
+//Seeing todays 2nd lab O dont think we need this in this file. ONly in main.jsx
+
 
 function Navbar() {
   return (
-    <nav style={{ padding: '1rem', backgroundColor: '#282c34', color: 'white' }}>
-      <h1>Mini React App</h1>
+    <nav id="navbar">
+      <h1>Your goToMart</h1>
+      <img src="" alt="" />
     </nav>
   );
 }

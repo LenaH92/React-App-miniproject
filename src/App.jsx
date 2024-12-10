@@ -1,18 +1,19 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
-import './App.css'
+import './App.css';
+import Navbar from "./Components/navbar";
+import Sidebar from "./Components/sidebar";
+import Footer from "./Components/footer"; 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <nav> 
-        <img></img>
-        <p>App</p>
-      </nav>
-       
-    </>
+    <div className='App'>
+      <Navbar />
+      <Sidebar />
+      <Footer />
+    </div>
+    
   )
 }
 
