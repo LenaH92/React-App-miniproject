@@ -4,6 +4,8 @@ import './App.css';
 import Navbar from "./Components/navbar";
 import Sidebar from "./Components/sidebar";
 import Footer from "./Components/footer"; 
+import jsonData from "../products.json"
+
 //
 //import { useState, useEffect } from 'react'
 
@@ -20,6 +22,7 @@ function App() {
     .then(data => setData(data))
   }, []) */
 
+  console.log(jsonData[0].category)
 
   return (
     <div className='App'>
@@ -27,6 +30,7 @@ function App() {
       <Sidebar />
       <Footer />
     </div>
+    
     
   )
 }
