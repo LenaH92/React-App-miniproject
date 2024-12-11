@@ -5,6 +5,8 @@ import Navbar from "./Components/navbar";
 import Sidebar from "./Components/sidebar";
 import Footer from "./Components/footer"; 
 import jsonData from "../products.json"
+import List from "./Components/List"
+import { useState } from 'react';
 
 //
 //import { useState, useEffect } from 'react'
@@ -13,22 +15,14 @@ import jsonData from "../products.json"
 
 
 function App() {
-
-  /* const [data, setData] = useState({})
-
-  useEffect(() => {
-    fetch("https://gist.github.com/ironhack-edu/8b7c90c909f70039e9f21c8ee191b0e5")
-    .then(res => res.json())
-    .then(data => setData(data))
-  }, []) */
-
-  console.log(jsonData[0].category)
-
+  const [data, setData] = useState(jsonData)
   return (
     <div className='App'>
       <Navbar />
       <Sidebar />
+      <List array={data}/>
       <Footer />
+      
     </div>
     
     
