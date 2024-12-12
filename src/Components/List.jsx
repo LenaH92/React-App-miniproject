@@ -11,14 +11,14 @@ const List = () => {
     setProducts(updatedList); // Update the state
   };
 
-    return (
+  return (
     <div>
       <h1>List</h1>
-      <ul style={{listStyleType:"none", gap:"1em", display:"flex", justifyContent:"space-evenly", flexWrap:"wrap"}}>
+      <ul id="homepageList">
         {products.map((currentProduct) =>
-         <ListItem key={currentProduct.id} product={currentProduct} onDelete={() => handleDelete(currentProduct.id)}/>
+          <ListItem key={currentProduct.id} product={currentProduct} onDelete={() => handleDelete(currentProduct.id)} />
         )}
-      </ul>           
+      </ul>
     </div>
   );
 };

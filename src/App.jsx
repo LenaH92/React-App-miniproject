@@ -18,10 +18,6 @@ function App() {
     <div className='App'>
       <Navbar />
       <Sidebar />
-      {/* <List /> */}
-
-
-
       <div>
         <Routes>
           <Route path='/' element={<Dashboard />} />
