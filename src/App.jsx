@@ -5,6 +5,7 @@ import Navbar from "./Components/navbar";
 import Sidebar from "./Components/sidebar";
 import Footer from "./Components/footer"; 
 import List from "./Components/List"
+import About from "./Components/pages/About"
 
 //
 //import { useState, useEffect } from 'react'
@@ -19,7 +20,8 @@ function App() {
     <div className='App'>
       <Navbar />
       <Sidebar />
-      <List />
+      {/* <List /> put in the dahsboard */}
+      <About></About>
       <Footer />
       
     </div>
