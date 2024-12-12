@@ -4,15 +4,15 @@
 
 const About = () => {
   return (
-    <div className="about-us-container">
+    <div className="aboutUsContainer">
       {/* Header Section */}
-      <header className="about-us-header">
+      <header className="aboutUsHeather">
         <h1>About Us</h1>
         <p>Your go-to destination for [products you sell].</p>
       </header>
 
       {/* Our Story Section */}
-      <section className="our-story">
+      <section className="ourStory">
         <h2>Our Story</h2>
         <p>
           Founded
