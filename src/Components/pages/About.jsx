@@ -1,6 +1,6 @@
 
 // import ListItem from "../List_Item"
-import "./App.css"; // Assuming you have a CSS file for styling
+//import "./App.css"; // Assuming you have a CSS file for styling
 
 const About = () => {
   return (
@@ -15,7 +15,7 @@ const About = () => {
       <section className="our-story">
         <h2>Our Story</h2>
         <p>
-          Founded 
+          Founded
         </p>
       </section>
 
