@@ -1,21 +1,24 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import ListItem from "./List_Item";
+import productsData from "../../products.json"
 
-const List = ({array}) => {
-    const [list, setList] = useState(array);
-    const handleDelete = (id) => {
-        const updatedList = list.filter((item) => item.id !== id); // Filter out the item with the given id
-        setList(updatedList); // Update the state
-      };
+const List = () => {
+  const [products, setProducts] = useState(productsData)
+
+  const handleDelete = (id) => {
+    const updatedList = products.filter((currentProduct) => currentProduct.id !== id); // Filter out the item with the given id
+    setProducts(updatedList); // Update the state
+  };
+
     return (
     <div>
       <h1>List</h1>
       <ul style={{listStyleType:"none", gap:"1em", display:"flex", justifyContent:"space-evenly", flexWrap:"wrap"}}>
-        {array.map((el) =>
-         <ListItem key={el.id} element={el} onDelete={handleDelete}/>
+        {products.map((currentProduct) =>
+         <ListItem key={currentProduct.id} product={currentProduct} onDelete={() => handleDelete(currentProduct.id)}/>
         )}
-      </ul>
+      </ul>           
     </div>
   );
 };

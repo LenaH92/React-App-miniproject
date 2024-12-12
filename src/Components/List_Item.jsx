@@ -1,21 +1,38 @@
 /* eslint-disable react/prop-types */
 
-const ListItem = ({ element, onDelete }) => {
+/* const ListItem = ({ product, onDelete }) => {
   return (
     <>
-      {element.price < 200 ? (
+      {product.price < 200 ? (
         <li style={{border: "1px solid black", height:"200px"}} >
-          <p>{element.title}</p>
-          <p>${element.price}</p>  ✅
-          <button onClick={() => onDelete(element.id)}>Delete</button> 
+          <p>{product.title}</p>
+          <p>${product.price}</p>  ✅
+          <button onClick={onDelete}>Delete</button> 
         </li>
       ) : (
         <li >
-          {element.title} ${element.price} ❌
-          <button onClick={() => onDelete(element.id)}>Delete</button>
+          {product.title} ${product.price} ❌
+          <button onClick={onDelete}>Delete</button>
         </li>
       )}
     </>
   );
 }; 
+export default ListItem; */
+
+const ListItem = ({ product, onDelete }) => {
+  return (
+    <li
+      style={
+        product.price < 200
+          ? { border: "1px solid black", height: "200px" }
+          : {}
+      }
+    >
+          <p>{product.title}</p>
+          <p>${product.price}</p> {product.price < 200 ? ("✅") : ("❌")}
+      <button onClick={onDelete}>Delete</button>
+    </li>
+  );
+};
 export default ListItem;
