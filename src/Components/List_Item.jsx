@@ -29,8 +29,8 @@ const ListItem = ({ product, onDelete }) => {
           : {}
       }
     >
-          <p>{product.title}</p>
-          <p>${product.price}</p> {product.price < 200 ? ("✅") : ("❌")}
+      <p>{product.title}</p>
+      <p>${product.price}</p> {product.price < 200 ? "✅" : "❌"}
       <button onClick={onDelete}>Delete</button>
     </li>
   );
