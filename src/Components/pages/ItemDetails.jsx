@@ -1,21 +1,28 @@
-function ItemDetails() {
+import { useParams } from "react-router";
+
+function ItemDetails({products}) {
     // We need to pass through the item as a prop or something so we have all the details in the page
     //I havent checked properly the keys of the objects, but I wrote them as a guide
+const {itemId} = useParams();
+const item = products.find((productEach)=> {
+
+return itemId == productEach.id
+}) 
 
     return (
-        <div className="itemDetailsDIV">
+       <> {item && <div className="itemDetailsDIV">
             <div className="itemGeneralInfo">
                 <div className="titleAndPic">
                     <div className="itemTitle">
-                        <h2>{ItemDetails.title}</h2>
-                        <p>{ItemDetails.brand}</p>
+                        <h2>{item.title}</h2>
+                        <p>{item.brand}</p>
                     </div>
                     <div className="itemThumbnail">
-                        <img src="{item.thumbnail}" alt="" />
+                        <img src={item.images[0]} alt="" />
                     </div>
                 </div>
                 <div className="priceAndstock">
-                    <h6 id="discountPercentage">{ItemDetails.discount}% off</h6>
+                    <h6 id="discountPercentage">{item.discount}% off</h6>
                     <h2>{item.price}</h2>
                     <p>{item.stock}</p>
                     <p id="categoryLabel">{item.category} </p>
@@ -31,7 +38,8 @@ function ItemDetails() {
 
                 </div>
             </div>
-        </div>
+        </div> }
+        </>
     );
 }
 

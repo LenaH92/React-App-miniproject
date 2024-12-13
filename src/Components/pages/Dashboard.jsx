@@ -1,10 +1,10 @@
 import List from "../List"
 
-function Dashboard() {
+function Dashboard({products, handleDelete}) {
   // eslint-disable-next-line no-unused-vars
 
   return (
-    <List />
+    <List products={products} handleDelete ={handleDelete}/>
   );
 }
 
