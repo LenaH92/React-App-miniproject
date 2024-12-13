@@ -1,16 +1,16 @@
 import { useParams } from "react-router";
 
-function ItemDetails({products}) {
+function ItemDetails({ products }) {
     // We need to pass through the item as a prop or something so we have all the details in the page
     //I havent checked properly the keys of the objects, but I wrote them as a guide
-const {itemId} = useParams();
-const item = products.find((productEach)=> {
+    const { itemId } = useParams();
+    const item = products.find((productEach) => {
 
-return itemId == productEach.id
-}) 
+        return itemId == productEach.id
+    })
 
     return (
-       <> {item && <div className="itemDetailsDIV">
+        <> {item && <div className="itemDetailsDIV">
             <div className="itemGeneralInfo">
                 <div className="titleAndPic">
                     <div className="itemTitle">
@@ -31,14 +31,14 @@ return itemId == productEach.id
             <div className="itemDetails">
                 <div className="detailsDescription">
                     <h4>Description</h4>
-                    <p>item.description</p>
+                    <p>{item.description}</p>
                 </div>
                 <div className="itemImgsDIV">
                     map through the imgs item.images has and display them all.
 
                 </div>
             </div>
-        </div> }
+        </div>}
         </>
     );
 }

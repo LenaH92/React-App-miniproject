@@ -1,8 +1,12 @@
 import { useState } from "react"
+import { v4 as uuidv4 } from "uuid"
 
 
 
-function addNewItem() {
+function AddNewItem({ products, setProducts }) {
+
+    //const [products, setProducts] = useState(products)
+
 
     const [title, setTitle] = useState("")
     const [description, setDescription] = useState("")
@@ -19,8 +23,9 @@ function addNewItem() {
 
     function handleSubmit(event) {
         event.preventDefault()
+
         const newItem = {
-            //id, we need to make it up with the uuiv extension
+            id: uuidv4(),
             title,
             description,
             price,
@@ -32,6 +37,23 @@ function addNewItem() {
             thumbnail,
             images
         }
+
+        addItem(newItem);
+
+        setTitle("")
+        setDescription("")
+        setPrice(0)
+        setDiscountPercentage(0)
+        setRating(0)
+        setStock(0)
+        setBrand("")
+        setCategory("")
+        setThumbnail("")
+        setImages("")
+    }
+
+    function addItem(itemObj) {
+        setProducts([itemObj, ...products])
     }
 
     return (
@@ -97,6 +119,8 @@ function addNewItem() {
         </div>
     )
 }
+
+export default AddNewItem;
 
 /* "id": 5,
       "title": "Huawei P30",

@@ -10,6 +10,7 @@ import ItemDetails from "./Components/pages/ItemDetails"
 import Dashboard from "./Components/pages/Dashboard"
 import { useState } from 'react';
 import productsData from "../products.json"
+import AddNewItem from "./Components/newItemForm"
 
 
 
@@ -27,9 +28,11 @@ function App() {
       <Sidebar />
       <div>
         <Routes>
-          <Route path='/' element={<Dashboard products={products} handleDelete={handleDelete}/>} />
+          <Route path='/' element={<Dashboard products={products} handleDelete={handleDelete} />} />
 
-          <Route path='/item/:itemId' element={<ItemDetails products={products}/>} />
+          <Route path='/item/:itemId' element={<ItemDetails products={products} />} />
+
+          <Route path='/item/new' element={<AddNewItem products={products} setProducts={setProducts} />} />
 
           <Route path='/about' element={<About />} />
           <Route path='*' element={<h1>404 <br /> page not found</h1>} />
@@ -45,8 +48,8 @@ function App() {
 export default App
 
 //App has all
-//Pages are bigger than components 
-//homepage = dashboard 
+//Pages are bigger than components
+//homepage = dashboard
 //dashboard has a list or more components or like new h1
-//(List page is a dashboard(home button)) has elements, and every element needs = Item Details which is a page! 
+//(List page is a dashboard(home button)) has elements, and every element needs = Item Details which is a page!
 //Item deails need a componenet to display item
