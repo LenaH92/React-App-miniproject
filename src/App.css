@@ -119,3 +119,18 @@
   margin: 20px;
   border: solid #52090E 3px;
 }
+
+.formDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #52090E;
+  justify-content: center;
+  align-items: center;
+}
+
+#addItemBTN {
+  background-color: #52090E;
+  border: solid #7C0B12 4px;
+  color: #ffd7d4;
+}

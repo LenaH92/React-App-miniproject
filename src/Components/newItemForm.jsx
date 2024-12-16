@@ -57,11 +57,11 @@ function AddNewItem({ products, setProducts }) {
     }
 
     return (
-        <div id="formDiv">
+        <div className="formDiv">
 
             <h2>Add a new Item to our store!</h2>
 
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="formDiv">
 
                 <label>
                     Item title:
@@ -113,7 +113,7 @@ function AddNewItem({ products, setProducts }) {
                     <input required type="text" value={images} placeholder="Write here the product images" onChange={event => setImages(event.target.value)} />
                 </label>
 
-                <button type="submit">Add Student</button>
+                <button type="submit" id="addItemBTN">Add New Item!</button>
             </form>
 
         </div>
