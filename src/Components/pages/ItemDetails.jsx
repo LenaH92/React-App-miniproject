@@ -1,8 +1,7 @@
 import { useParams } from "react-router";
 
+
 function ItemDetails({ products }) {
-    // We need to pass through the item as a prop or something so we have all the details in the page
-    //I havent checked properly the keys of the objects, but I wrote them as a guide
     const { itemId } = useParams();
     const item = products.find((productEach) => {
 

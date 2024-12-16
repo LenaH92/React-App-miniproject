@@ -13,13 +13,13 @@ import productsData from "../products.json"
 import AddNewItem from "./Components/newItemForm"
 
 
-
 function App() {
   const [products, setProducts] = useState(productsData)
 
   const handleDelete = (id) => {
     const updatedList = products.filter((currentProduct) => currentProduct.id !== id); // Filter out the item with the given id
     setProducts(updatedList); // Update the state
+
   };
 
   return (
@@ -30,7 +30,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Dashboard products={products} handleDelete={handleDelete} />} />
 
-          <Route path='/item/:itemId' element={<ItemDetails products={products} />} />
+          <Route path='/item/:itemId' element={<ItemDetails products={products}  />} />
 
           <Route path='/item/new' element={<AddNewItem products={products} setProducts={setProducts} />} />
 
