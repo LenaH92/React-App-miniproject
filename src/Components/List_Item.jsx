@@ -2,15 +2,16 @@
 
 const ListItem = ({ product, onDelete }) => {
   return (
-    <li >
+    <li>
       <div className="listedItem">
-
-        <img src={product.images[0]} alt="product image" className="itemIMG" />
+        <img src={product.thumbnail} alt="product image" className="itemIMG" />
 
         <div>
           <div id="cardTitle">
             <div>
-              <h3>{product.title} - {product.price}€</h3>
+              <h3>
+                {product.title} - {product.price}€
+              </h3>
             </div>
             <div id="discountDiv">
               <h4>{product.discountPercentage}% off</h4>
@@ -21,17 +22,17 @@ const ListItem = ({ product, onDelete }) => {
             <div>{product.category}</div>
             <div>
               <h4>{product.rating}/5</h4>
+              <button
+                onClick={(e) => {
+                  onDelete(e); // Call the delete handler
+                }}
+              >
+                Delete
+              </button>
             </div>
           </div>
         </div>
       </div>
-
-
-
-      {/* 
-      <p>{product.title}</p>
-      <p>${product.price}</p> {product.price < 200 ? "✅" : "❌"}
-      <button onClick={onDelete}>Delete</button>*/}
     </li>
   );
 };
