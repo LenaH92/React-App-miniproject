@@ -77,7 +77,7 @@
   flex-direction: row;
   justify-content: space-around;
   gap: 15px;
-  /* Espacio entre enlaces */
+  /* space between links */
   box-shadow: 2px 0 5px #1B1811;
   border: solid #1B1811 4px;
 }
