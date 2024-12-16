@@ -1,39 +1,33 @@
-/* eslint-disable react/prop-types */
 
-const ListItem = ({ product, onDelete }) => {
+import ActionButtons from "./ActionButtons";
+
+const ListItem = ({ product, handleDelete, setProducts }) => {
   return (
-    <li>
-      <div className="listedItem">
-        <img src={product.thumbnail} alt="product image" className="itemIMG" />
-
+    <div className="listedItem">
+      <img src={product.thumbnail} alt="product image" className="itemIMG" />
+      <div>
+        <div id="cardTitle">
+          <h3>
+            {product.title} - {product.price}€
+          </h3>
+          <h4>{product.discountPercentage}% off</h4>
+        </div>
+        <p className="productDescription">{product.description}</p>
         <div>
-          <div id="cardTitle">
-            <div>
-              <h3>
-                {product.title} - {product.price}€
-              </h3>
-            </div>
-            <div id="discountDiv">
-              <h4>{product.discountPercentage}% off</h4>
-            </div>
-          </div>
-          <p className="productDescription">{product.description}</p>
+          <div>{product.category}</div>
           <div>
-            <div>{product.category}</div>
-            <div>
-              <h4>{product.rating}/5</h4>
-              <button
-                onClick={(e) => {
-                  onDelete(e); // Call the delete handler
-                }}
-              >
-                Delete
-              </button>
-            </div>
+            <h4>{product.rating}/5</h4>
+            {/* Use ActionButtons */}
+            <ActionButtons
+              product={product}
+              handleDelete={handleDelete}
+              setProducts={setProducts}
+            />
           </div>
         </div>
       </div>
-    </li>
+    </div>
   );
 };
+
 export default ListItem;

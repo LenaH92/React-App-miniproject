@@ -1,38 +1,26 @@
-/* eslint-disable react/prop-types */
-import { useState } from "react";
-import ListItem from "./List_Item";
+
 import { Link } from "react-router";
-// import productsData from "../../products.json"
+import ListItem from "./List_Item";
 
-const List = ({ products, handleDelete }) => {
-  // const [products, setProducts] = useState(productsData)
-
-  // const handleDelete = (id) => {
-  //   const updatedList = products.filter((currentProduct) => currentProduct.id !== id); // Filter out the item with the given id
-  //   setProducts(updatedList); // Update the state
-  // };
-
+const List = ({ products, handleDelete, setProducts }) => {
   return (
     <div>
       <h1>List</h1>
       <ul id="homepageList">
         {products.map((currentProduct) => (
           <li key={currentProduct.id}>
-            <Link to={`/item/${currentProduct.id}`}> 
-       
-            <ListItem
+            <Link to={`/item/${currentProduct.id}`}>
+              <ListItem
                 product={currentProduct}
-                onDelete={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation(); // Prevent Link click
-                  handleDelete(currentProduct.id);
-                }}
+                handleDelete={handleDelete}
+                setProducts={setProducts} // Pass setProducts to ListItem
               />
-           </Link>
+            </Link>
           </li>
         ))}
       </ul>
     </div>
   );
 };
+
 export default List;
