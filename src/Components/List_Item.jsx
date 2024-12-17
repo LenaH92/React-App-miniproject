@@ -7,7 +7,7 @@ const ListItem = ({ product, onDelete }) => {
       <div className="listedItem">
         <img src={product.thumbnail} alt="product image" className="itemIMG" />
 
-        <div>
+        <div id="itemInfoDiv">
           <div id="cardTitle">
             <div>
               <h3>
@@ -23,13 +23,18 @@ const ListItem = ({ product, onDelete }) => {
             <div>{product.category}</div>
             <div>
               <h4>{product.rating}/5</h4>
-              <button
+              <div><button
                 onClick={(e) => {
                   onDelete(e); // Call the delete handler
                 }}
               >
-                Delete
+                Delete Item
               </button>
+                <button type="button">
+                  Edit Item
+                </button>
+              </div>
+
             </div>
           </div>
         </div>
