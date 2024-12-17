@@ -4,7 +4,7 @@ import ListItem from "./List_Item";
 import { Link } from "react-router";
 // import productsData from "../../products.json"
 
-const List = ({ products, handleDelete }) => {
+const List = ({ products, onDelete }) => {
   // const [products, setProducts] = useState(productsData)
 
   // const handleDelete = (id) => {
@@ -21,11 +21,14 @@ const List = ({ products, handleDelete }) => {
             <Link to={`/item/${currentProduct.id}`}> 
        
             <ListItem
-                product={currentProduct}
-                onDelete={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation(); // Prevent Link click
-                  handleDelete(currentProduct.id);
+                // product={currentProduct}
+                // onDelete={(e) => {
+                //   e.preventDefault();
+                //   e.stopPropagation(); // Prevent Link click
+                //   handleDelete(currentProduct.id);
+                // }}
+                onClick={(e) => {
+                  onDelete(product.id); // Call the delete handler
                 }}
               />
            </Link>
