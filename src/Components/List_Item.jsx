@@ -1,4 +1,4 @@
-
+/* eslint-disable react/prop-types */
 import ActionButtons from "./ActionButtons";
 
 const ListItem = ({ product, handleDelete, setProducts }) => {

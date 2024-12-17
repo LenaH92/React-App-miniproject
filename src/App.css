@@ -44,7 +44,7 @@
   color: #888;
 }
 
-/* NEW STYLING FROMHERE ON */
+/* NEW STYLING FROM HERE ON */
 .colorPalette {
   color: #BA8F58;
   color: #CC9901;
@@ -80,6 +80,12 @@
   /* space between links */
   box-shadow: 2px 0 5px #1B1811;
   border: solid #1B1811 4px;
+
+}
+
+
+.sidebar a {
+  color: #f1f1f1;
 }
 
 #footer {
@@ -104,13 +110,27 @@
   margin-right: 30px;
   display: flex;
   flex-direction: row;
+  padding-bottom: 20px;
 
+}
+
+li {
+  list-style: none;
+}
+
+#itemInfoDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 800px;
+  padding: 0 20px 0 20px;
 }
 
 #cardTitle {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  gap: 20px;
   /* change this so the price and the title are in differet corners of the div */
 }
 
@@ -118,6 +138,8 @@
   border-radius: 10px;
   margin: 20px;
   border: solid #52090E 3px;
+  width: 170px;
+  height: 170px;
 }
 
 .formDiv {
