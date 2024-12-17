@@ -3,19 +3,21 @@ import Navbar from "./Components/navbar";
 import Sidebar from "./Components/sidebar";
 import Footer from "./Components/footer";
 import About from "./Components/pages/About";
-import { Route, Routes } from "react-router";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import ItemDetails from "./Components/pages/ItemDetails";
 import Dashboard from "./Components/pages/Dashboard";
 import { useState } from 'react';
 import productsData from "../products.json";
 import AddNewItem from "./Components/newItemForm";
 
+
 function App() {
   const [products, setProducts] = useState(productsData);
-
+  const navigate = useNavigate();
   const handleDelete = (id) => {
     const updatedList = products.filter((currentProduct) => currentProduct.id !== id); // Filter out the item with the given id
-    setProducts(updatedList); // Update the state
+    setProducts(updatedList); // Update the state 
+  navigate("/");
   };
 
   return (
@@ -31,7 +33,7 @@ function App() {
           />
           <Route
             path='/item/:itemId'
-            element={<ItemDetails products={products} setProducts={setProducts} />}
+            element={<ItemDetails products={products} setProducts={setProducts} handleDelete={handleDelete} />}
           />
           <Route
             path='/item/new'

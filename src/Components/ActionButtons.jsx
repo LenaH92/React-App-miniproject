@@ -3,7 +3,8 @@ import EditForm from "./editItemForm";
 
 const ActionButtons = ({ product, handleDelete, setProducts }) => {
   const [isEditing, setIsEditing] = useState(false); // Track edit mode
-
+// const {pathname} = useLocation();
+// console.log(!pathname.includes ('item'))
   const handleUpdate = (updatedProduct) => {
     setProducts((prevProducts) =>
       prevProducts.map((p) => (p.id === updatedProduct.id ? updatedProduct : p))
@@ -19,7 +20,6 @@ const ActionButtons = ({ product, handleDelete, setProducts }) => {
           <button
             onClick={(e) => {
               e.preventDefault();
-              e.stopPropagation(); // Prevent navigation
               setIsEditing(true); // Open edit form
             }}
           >
@@ -29,14 +29,17 @@ const ActionButtons = ({ product, handleDelete, setProducts }) => {
           <button
             onClick={(e) => {
               e.preventDefault();
-              e.stopPropagation(); // Prevent navigation
+             
               handleDelete(product.id); // Call delete handler
             }}
           >
             Delete
           </button>
+          {/* {!pathname.includes ('item') && 
+          <button><Link to={`/item/${product.id}`}>see more details</Link></button>} */}
         </>
       ) : (
+        
         <EditForm product={product} onSubmit={handleUpdate} />
       )}
     </div>

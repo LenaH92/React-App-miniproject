@@ -9,13 +9,13 @@ const List = ({ products, handleDelete, setProducts }) => {
       <ul id="homepageList">
         {products.map((currentProduct) => (
           <li key={currentProduct.id}>
-            <Link to={`/item/${currentProduct.id}`}>
+    
               <ListItem
                 product={currentProduct}
                 handleDelete={handleDelete}
                 setProducts={setProducts} // Pass setProducts to ListItem
               />
-            </Link>
+    
           </li>
         ))}
       </ul>

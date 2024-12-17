@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import ActionButtons from "./ActionButtons";
+import { Link } from "react-router";
 
 const ListItem = ({ product, handleDelete, setProducts }) => {
   return (
@@ -18,11 +19,14 @@ const ListItem = ({ product, handleDelete, setProducts }) => {
           <div>
             <h4>{product.rating}/5</h4>
             {/* Use ActionButtons */}
-            <ActionButtons
+            {/* <ActionButtons
+            
               product={product}
               handleDelete={handleDelete}
               setProducts={setProducts}
-            />
+            
+            /> */}
+            <button><Link to={`/item/${product.id}`}>See more</Link></button>
           </div>
         </div>
       </div>
