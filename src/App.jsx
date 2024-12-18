@@ -13,6 +13,7 @@ import AddNewItem from "./Components/newItemForm";
 
 function App() {
   const [products, setProducts] = useState(productsData);
+ 
   const navigate = useNavigate();
   const handleDelete = (id) => {
     const updatedList = products.filter((currentProduct) => currentProduct.id !== id); // Filter out the item with the given id
@@ -23,8 +24,9 @@ function App() {
   return (
     <div className='App'>
       <Navbar />
-      <Sidebar />
-      <div>
+    
+      <div id="content" style={{display: "flex"}}>
+        <Sidebar/>
         <Routes>
           {/* Pass products and setProducts to ItemDetails */}
           <Route
@@ -45,6 +47,8 @@ function App() {
       </div>
       <Footer />
     </div>
+
+   
   );
 }
 
