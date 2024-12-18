@@ -3,8 +3,8 @@ import EditForm from "./editItemForm";
 
 const ActionButtons = ({ product, handleDelete, setProducts }) => {
   const [isEditing, setIsEditing] = useState(false); // Track edit mode
-// const {pathname} = useLocation();
-// console.log(!pathname.includes ('item'))
+  // const {pathname} = useLocation();
+  // console.log(!pathname.includes ('item'))
   const handleUpdate = (updatedProduct) => {
     setProducts((prevProducts) =>
       prevProducts.map((p) => (p.id === updatedProduct.id ? updatedProduct : p))
@@ -13,7 +13,7 @@ const ActionButtons = ({ product, handleDelete, setProducts }) => {
   };
 
   return (
-    <div>
+    <div className="actionBTNs">
       {!isEditing ? (
         <>
           {/* Edit Button */}
@@ -29,7 +29,7 @@ const ActionButtons = ({ product, handleDelete, setProducts }) => {
           <button
             onClick={(e) => {
               e.preventDefault();
-             
+
               handleDelete(product.id); // Call delete handler
             }}
           >
@@ -39,7 +39,7 @@ const ActionButtons = ({ product, handleDelete, setProducts }) => {
           <button><Link to={`/item/${product.id}`}>see more details</Link></button>} */}
         </>
       ) : (
-        
+
         <EditForm product={product} onSubmit={handleUpdate} />
       )}
     </div>

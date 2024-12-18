@@ -18,14 +18,6 @@ const ListItem = ({ product, handleDelete, setProducts }) => {
           <div className="categoryLabel"><span>{product.category}</span></div>
           <div>
             <h4>{product.rating}/5</h4>
-            {/* Use ActionButtons */}
-            {/* <ActionButtons
-            
-              product={product}
-              handleDelete={handleDelete}
-              setProducts={setProducts}
-            
-            /> */}
             <button className="detailsBTN"><Link to={`/item/${product.id}`}>See more</Link></button>
           </div>
         </div>

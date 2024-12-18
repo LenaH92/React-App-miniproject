@@ -27,7 +27,7 @@ const ItemDetails = ({ products, setProducts, handleDelete }) => {
         <h4>Description</h4>
         <p>{item.description}</p>
       </div>
-      {/* Use ActionButtons */}
+
       <ActionButtons
         product={item}
         handleDelete={handleDelete}

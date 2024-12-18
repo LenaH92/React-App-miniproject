@@ -28,31 +28,17 @@
 
 #navbar {
   padding: 1rem;
-  background-color: #c39491;
+  background: linear-gradient(to bottom, #52090E, #BA8F58, antiquewhite);
+
+  height: 30vh;
   color: white;
-  height: 20vh;
+  text-shadow: 2px 2px 8px #7C0B12, -2px -2px 8px #BA8F58, 2px 2px 4px black, -2px -2px 4px black;
 }
 
 #content {
   min-height: 70vh;
+  color: #52090E;
 }
-
-/* 
-.sidebar {
-
-  background-color: #52090E;
-  color: #FAE59B;
-  padding: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  gap: 15px;
-
-  box-shadow: 2px 0 5px #1B1811;
-  border: solid #1B1811 4px;
-
-} */
-
 
 .sidebar a {
   color: #f1f1f1;
@@ -61,8 +47,14 @@
 #footer {
   padding: 1rem;
   text-align: center;
-  background-color: #f1f1f1;
+  background-color: #c39491;
+  box-shadow: 0 -10px 10px 0 #c39491;
   height: 10vh
+}
+
+#footer a {
+  color: black;
+  text-shadow: 2px 2px 8px #7C0B12, -2px -2px 8px #BA8F58
 }
 
 #homepageList {
@@ -102,7 +94,6 @@ li {
   flex-direction: row;
   justify-content: space-around;
   gap: 20px;
-  /* change this so the price and the title are in differet corners of the div */
 }
 
 .itemIMG {
@@ -125,7 +116,7 @@ li {
 .buttonStyling,
 button {
   background-color: #52090E;
-  border: solid #7C0B12 4px;
+  border: solid #DAA520 4px;
   color: #ffd7d4;
 }
 
@@ -169,9 +160,9 @@ button {
   top: 0;
   left: 300px;
   /* Hidden by default */
-  width: 300px;
+  width: 200px;
   /* Sidebar width */
-  height: 80%;
+  height: 50%;
   background-color: #6b1212;
   color: white;
   transition: left 0.3s ease-in-out;
@@ -207,4 +198,16 @@ button {
 
 .biggestDiv {
   margin: 0 auto;
+  color: #52090E;
+}
+
+.actionBTNs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+}
+
+.titleAndPic img {
+  max-height: 300px;
 }
