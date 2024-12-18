@@ -6,7 +6,7 @@ const ListItem = ({ product, handleDelete, setProducts }) => {
   return (
     <div className="listedItem">
       <img src={product.thumbnail} alt="product image" className="itemIMG" />
-      <div>
+      <div className="detailsCard">
         <div id="cardTitle">
           <h3>
             {product.title} - {product.price}€
@@ -15,7 +15,7 @@ const ListItem = ({ product, handleDelete, setProducts }) => {
         </div>
         <p className="productDescription">{product.description}</p>
         <div>
-          <div>{product.category}</div>
+          <div className="categoryLabel"><span>{product.category}</span></div>
           <div>
             <h4>{product.rating}/5</h4>
             {/* Use ActionButtons */}
@@ -26,7 +26,7 @@ const ListItem = ({ product, handleDelete, setProducts }) => {
               setProducts={setProducts}
             
             /> */}
-            <button><Link to={`/item/${product.id}`}>See more</Link></button>
+            <button className="detailsBTN"><Link to={`/item/${product.id}`}>See more</Link></button>
           </div>
         </div>
       </div>

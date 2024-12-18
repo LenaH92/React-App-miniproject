@@ -2,6 +2,8 @@
 // import ListItem from "../List_Item"
 //import "./App.css"; // Assuming you have a CSS file for styling
 
+import { Link } from "react-router-dom";
+
 const About = () => {
   return (
     <div className="aboutUsContainer">
@@ -28,8 +30,9 @@ const About = () => {
           difference. We are committed to making your shopping experience
           exceptional.
         </p>
-        <button onClick={() => window.location.href = "/ListItem"}>
+        <button><Link to={`/`}>
           Shop Now
+        </Link>
         </button>
       </section>
     </div>

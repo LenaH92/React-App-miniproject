@@ -151,8 +151,41 @@ li {
   align-items: center;
 }
 
-#addItemBTN {
+#addItemBTN,
+button {
   background-color: #52090E;
   border: solid #7C0B12 4px;
   color: #ffd7d4;
+}
+
+.detailsBTN a {
+  color: #ffd7d4;
+}
+
+.aboutUsContainer {
+  color: #52090E;
+  padding: 0 30px 30px 30px;
+}
+
+.detailsCard {
+  width: 700px;
+
+}
+
+.productDescription {
+  text-align: left;
+  font-style: italic;
+}
+
+.categoryLabel {
+
+  text-align: left;
+}
+
+.categoryLabel span {
+  background-color: #f0bab6;
+  color: #1B1811;
+  padding: 2px 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #c39491;
 }
