@@ -211,3 +211,23 @@ button {
 .titleAndPic img {
   max-height: 300px;
 }
+
+.justUs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+}
+
+#mariiasDiv,
+#lenasDiv {
+  padding: 30px;
+  width: 400px;
+  background: radial-gradient(ellipse, antiquewhite, #FAE59B);
+  border-radius: 30px;
+}
+
+#mariiasDiv img,
+#lenasDiv img {
+  height: 200px;
+}
