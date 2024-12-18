@@ -4,18 +4,18 @@ import ListItem from "./List_Item";
 
 const List = ({ products, handleDelete, setProducts }) => {
   return (
-    <div>
+    <div className="biggestDiv">
       <h1>List</h1>
       <ul id="homepageList">
         {products.map((currentProduct) => (
           <li key={currentProduct.id}>
-    
-              <ListItem
-                product={currentProduct}
-                handleDelete={handleDelete}
-                setProducts={setProducts} // Pass setProducts to ListItem
-              />
-    
+
+            <ListItem
+              product={currentProduct}
+              handleDelete={handleDelete}
+              setProducts={setProducts} // Pass setProducts to ListItem
+            />
+
           </li>
         ))}
       </ul>

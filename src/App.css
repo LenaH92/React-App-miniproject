@@ -30,12 +30,13 @@
   padding: 1rem;
   background-color: #c39491;
   color: white;
-  height:10vh
+  height: 20vh;
 }
 
-#content{
-  min-height:70vh;
+#content {
+  min-height: 70vh;
 }
+
 /* 
 .sidebar {
 
@@ -61,7 +62,7 @@
   padding: 1rem;
   text-align: center;
   background-color: #f1f1f1;
-  height:10vh
+  height: 10vh
 }
 
 #homepageList {
@@ -121,14 +122,15 @@ li {
   align-items: center;
 }
 
-#addItemBTN,
+.buttonStyling,
 button {
   background-color: #52090E;
   border: solid #7C0B12 4px;
   color: #ffd7d4;
 }
 
-.detailsBTN a {
+.detailsBTN a,
+.buttonStyling a {
   color: #ffd7d4;
 }
 
@@ -165,22 +167,27 @@ button {
 .sidebar {
   position: fixed;
   top: 0;
-  left: 300px; /* Hidden by default */
-  width: 300px; /* Sidebar width */
-  height:80%;
+  left: 300px;
+  /* Hidden by default */
+  width: 300px;
+  /* Sidebar width */
+  height: 80%;
   background-color: #6b1212;
   color: white;
-  transition: left 0.3s ease-in-out; /* Smooth animation */
+  transition: left 0.3s ease-in-out;
+  /* Smooth animation */
   display: none;
   flex-direction: column;
   justify-content: space-around;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-  z-index: 999; /* Ensure it's above content */
+  z-index: 999;
+  /* Ensure it's above content */
 }
 
 .sidebar.visible {
-  left: 0; /* Slide in */
+  left: 0;
+  /* Slide in */
   display: flex
 }
 
@@ -196,4 +203,8 @@ button {
   cursor: pointer;
   border-radius: 5px;
   z-index: 1000;
+}
+
+.biggestDiv {
+  margin: 0 auto;
 }

@@ -30,7 +30,7 @@ const About = () => {
           difference. We are committed to making your shopping experience
           exceptional.
         </p>
-        <button><Link to={`/`}>
+        <button className="buttonStyling"><Link to={`/`}>
           Shop Now
         </Link>
         </button>

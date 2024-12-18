@@ -113,7 +113,7 @@ function AddNewItem({ products, setProducts }) {
                     <input required type="text" value={images} placeholder="Write here the product images" onChange={event => setImages(event.target.value)} />
                 </label>
 
-                <button type="submit" id="addItemBTN">Add New Item!</button>
+                <button type="submit" className="buttonStyling">Add New Item!</button>
             </form>
 
         </div>
@@ -121,15 +121,3 @@ function AddNewItem({ products, setProducts }) {
 }
 
 export default AddNewItem;
-
-/* "id": 5,
-      "title": "Huawei P30",
-      "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
-      "price": 499,
-      "discountPercentage": 10.58,
-      "rating": 4.09,
-      "stock": 32,
-      "brand": "Huawei",
-      "category": "smartphones",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg",
-      "images":  */

@@ -13,20 +13,20 @@ import AddNewItem from "./Components/newItemForm";
 
 function App() {
   const [products, setProducts] = useState(productsData);
- 
+
   const navigate = useNavigate();
   const handleDelete = (id) => {
     const updatedList = products.filter((currentProduct) => currentProduct.id !== id); // Filter out the item with the given id
     setProducts(updatedList); // Update the state 
-  navigate("/");
+    navigate("/");
   };
 
   return (
     <div className='App'>
       <Navbar />
-    
-      <div id="content" style={{display: "flex"}}>
-        <Sidebar/>
+
+      <div id="content" style={{ display: "flex", justifyContent: "center" }}>
+        <Sidebar />
         <Routes>
           {/* Pass products and setProducts to ItemDetails */}
           <Route
@@ -48,7 +48,7 @@ function App() {
       <Footer />
     </div>
 
-   
+
   );
 }
 
