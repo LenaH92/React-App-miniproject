@@ -1,10 +1,9 @@
-
 import { useParams } from "react-router";
 import ActionButtons from "../ActionButtons";
 
 const ItemDetails = ({ products, setProducts, handleDelete }) => {
   const { itemId } = useParams();
-  const item = products.find((product) => product.id === Number(itemId));
+  const item = products.find((product) => product.id == itemId);
 
   if (!item) return <h2>Item not found</h2>;
 

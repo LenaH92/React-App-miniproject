@@ -53,7 +53,7 @@ function AddNewItem({ products, setProducts }) {
   return (
     <div className="h2Div">
       <h2>Add a new Item to our store!</h2>
-      <div className="formDiv">
+      <div /* className="formDiv" */>
         <form onSubmit={handleSubmit} className="formDiv">
           <label>
             Item title:

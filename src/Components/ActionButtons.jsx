@@ -39,7 +39,6 @@ const ActionButtons = ({ product, handleDelete, setProducts }) => {
           <button><Link to={`/item/${product.id}`}>see more details</Link></button>} */}
         </>
       ) : (
-
         <EditForm product={product} onSubmit={handleUpdate} />
       )}
     </div>
