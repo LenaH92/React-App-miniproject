@@ -4,21 +4,16 @@
   text-align: center;
 }
 
-
-
-
-
 /* NEW STYLING FROM HERE ON */
 .colorPalette {
-  color: #BA8F58;
-  color: #CC9901;
-  color: #DAA520;
-  color: #FAE59B;
+  color: #ba8f58;
+  color: #cc9901;
+  color: #daa520;
+  color: #fae59b;
   color: #c39491;
-  color: #7C0B12;
-  color: #52090E;
-  color: #1B1811;
-
+  color: #7c0b12;
+  color: #52090e;
+  color: #1b1811;
 }
 
 .App {
@@ -28,16 +23,17 @@
 
 #navbar {
   padding: 1rem;
-  background: linear-gradient(to bottom, #52090E, #BA8F58, antiquewhite);
+  background: linear-gradient(to bottom, #52090e, #ba8f58, antiquewhite);
 
-  height: 30vh;
+  height: 16vh;
   color: white;
-  text-shadow: 2px 2px 8px #7C0B12, -2px -2px 8px #BA8F58, 2px 2px 4px black, -2px -2px 4px black;
+  text-shadow: 2px 2px 8px #7c0b12, -2px -2px 8px #ba8f58, 2px 2px 4px black,
+    -2px -2px 4px black;
 }
 
 #content {
   min-height: 70vh;
-  color: #52090E;
+  color: #52090e;
 }
 
 .sidebar a {
@@ -49,12 +45,12 @@
   text-align: center;
   background-color: #c39491;
   box-shadow: 0 -10px 10px 0 #c39491;
-  height: 10vh
+  height: 10vh;
 }
 
 #footer a {
   color: black;
-  text-shadow: 2px 2px 8px #7C0B12, -2px -2px 8px #BA8F58
+  text-shadow: 2px 2px 8px #7c0b12, -2px -2px 8px #ba8f58;
 }
 
 #homepageList {
@@ -65,16 +61,15 @@
 }
 
 .listedItem {
-  background-color: #FAE59B;
-  color: #52090E;
-  border: solid #52090E 3px;
+  background-color: #fae59b;
+  color: #52090e;
+  border: solid #52090e 3px;
   border-radius: 10px;
   list-style: none;
   margin-right: 30px;
   display: flex;
   flex-direction: row;
   padding-bottom: 20px;
-
 }
 
 li {
@@ -99,7 +94,7 @@ li {
 .itemIMG {
   border-radius: 10px;
   margin: 20px;
-  border: solid #52090E 3px;
+  border: solid #52090e 3px;
   width: 170px;
   height: 170px;
 }
@@ -107,17 +102,51 @@ li {
 .formDiv {
   display: flex;
   flex-direction: column;
+  align-items: flex-end; /* Align input fields and labels to the right */
   gap: 20px;
-  color: #52090E;
-  justify-content: center;
-  align-items: center;
+  color: #52090e;
+  justify-content: flex-start; /* Keep it closer to the top */
+  text-align: right; /* Align labels to the right */
+  max-width: 400px; /* Limit the form's width for better appearance */
+  margin: 20px auto; /* Center horizontally with margin from the top */
+
+  border-radius: 10px; /* Rounded corners */
 }
 
-.buttonStyling,
-button {
-  background-color: #52090E;
-  border: solid #DAA520 4px;
-  color: #ffd7d4;
+button.buttonStyling {
+  align-self: center; /* Center the button within the form */
+  padding: 10px;
+  color: #fff;
+  background-color: #52090e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button.buttonStyling:hover {
+  background-color: #760d13; /* Darker shade on hover */
+}
+
+label {
+  width: 100%; /* Make labels span the full width for alignment */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+
+input {
+  margin-left: 10px; /* Add space between label and input */
+  padding: 5px;
+  width: 60%; /* Adjust the width of inputs */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+h2 {
+  text-align: center; /* Center the header text */
+  margin-bottom: 20px;
+  color: #52090e;
 }
 
 .detailsBTN a,
@@ -126,13 +155,12 @@ button {
 }
 
 .aboutUsContainer {
-  color: #52090E;
+  color: #52090e;
   padding: 0 30px 30px 30px;
 }
 
 .detailsCard {
   width: 700px;
-
 }
 
 .productDescription {
@@ -141,18 +169,16 @@ button {
 }
 
 .categoryLabel {
-
   text-align: left;
 }
 
 .categoryLabel span {
   background-color: #f0bab6;
-  color: #1B1811;
+  color: #1b1811;
   padding: 2px 5px;
   border-radius: 5px;
   box-shadow: 0 0 10px #c39491;
 }
-
 
 /* Sidebar */
 .sidebar {
@@ -179,7 +205,7 @@ button {
 .sidebar.visible {
   left: 0;
   /* Slide in */
-  display: flex
+  display: flex;
 }
 
 /* Hamburger Menu */
@@ -187,7 +213,7 @@ button {
   position: fixed;
   top: 10px;
   left: 10px;
-  background-color: #fff;
+  background-color: #52090e;
   border: 2px solid #ccc;
   padding: 10px;
   font-size: 20px;
@@ -198,7 +224,7 @@ button {
 
 .biggestDiv {
   margin: 0 auto;
-  color: #52090E;
+  color: #52090e;
 }
 
 .actionBTNs {
@@ -223,7 +249,7 @@ button {
 #lenasDiv {
   padding: 30px;
   width: 400px;
-  background: radial-gradient(ellipse, antiquewhite, #FAE59B);
+  background: radial-gradient(ellipse, antiquewhite, #fae59b);
   border-radius: 30px;
 }
 
